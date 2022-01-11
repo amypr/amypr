@@ -1,0 +1,45 @@
+Stage = -1:
+Board load call
+
+Stage = 0:
+player i given choice of action (roll, use item, scan board)
+
+Stage = 1: 
+Player i is selecting item
+
+Stage = 2:
+use item
+
+Stage = 3:
+board edge scrolling (use to look ahead/behind/other players)
+
+... item use and other effects
+
+stage = 9:
+spawn dice
+
+Stage = 10:
+Player dice roll
+
+stage = 11:
+Player dice roll finished, show roll value
+
+stage = 12:
+clean up dice 
+
+stage = 13:
+Move player roll value spaces forward (move with positive x velocity until reached)
+
+stage = 14:
+Game tile effect on player (set stage to proper value), includes shop
+
+stage = 15:
+Player end turn, increment turn if more players remaining, else goto minigame queue
+
+stage 16:
+Minigame select and load, unload game board
+
+stage = 17:
+return from minigame and update scores, set player turn to 0 and goto stage -1 (load board)
+
+
